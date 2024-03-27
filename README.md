@@ -6,6 +6,7 @@
 # Website do aplicativo Petfinder
 Seções:
 - [Sobre o site](#sobre-o-site)
+- [Como executar o site](#como-executar-o-site)
 - [Requisitos](#requisitos)
 - [Equipe](#equipe)
 
@@ -13,7 +14,10 @@ Seções:
 O site é uma representação visual do banco de dados do aplicativo PetFinder. Ele deve lhe proporcionar todas as opções de CRUD para cada documento disponível.
 
 ## Requisitos
--> TBD
+Para executar/modificar o site, será necessário o `Node.js`.
+
+## Como executar o site
+Após instalar todas as dependências via `npm install`, executar o comando `npm run start`.
 
 ## Equipe:
 * Carlos Alberto Ramalho - 01585045
