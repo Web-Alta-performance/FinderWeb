@@ -15,7 +15,7 @@ const team = [
 const About = () => {
     return (<div>
             <div style={{flex: 1, display: 'flex', justifyContent: 'center'}}>
-                <h3>Esta página ainda receberá uma estilização em CSS apropriada.</h3>
+                <h3 style={{textAlign: 'center'}}>Esta página ainda receberá uma estilização em CSS apropriada.</h3>
             </div>
             <h2>Sobre o PetFinder</h2>
             <p>
@@ -31,9 +31,9 @@ const About = () => {
             </p>
             <br/>
             <h2>Equipe</h2>
-            {team.map((member) => {
+            {team.map((member, key) => {
                 return (
-                    <p>{`${member.name} — ${member.function}`}</p>
+                    <p key={key}>{`${member.name} — ${member.function}`}</p>
                 )
             })}
             <br/>
