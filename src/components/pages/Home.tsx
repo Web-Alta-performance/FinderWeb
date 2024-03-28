@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <>
         <h4>This is the homepage!</h4>
-        <img alt="gato joinha" src={img_link} />
+        <img style={{width: '100'}} alt="gato joinha" src={img_link} />
         </>
     )
 };
