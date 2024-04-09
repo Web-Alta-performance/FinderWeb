@@ -3,12 +3,15 @@
 :root {
     --background-color: hsl(140, 4%, 16%);
     --text-color: hsl(150, 55%, 100%);
-    --link-hover: hsl(150, 100%, 85%);
+    --text-warning: hsl(0, 80%, 65%);
+    --dark-background: hsl(0, 0%, 9%);
+    --element-green: hsl(150, 70%, 50%);
 }
 
 html,
 body {
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    margin: 0;
 }
 
 a,
@@ -26,12 +29,17 @@ a,
 a:visited {
     text-decoration: none;
     color: var(--text-color);
+    transition: color 100ms;
 }
 
 .link:hover {
-    color: var(--link-hover);
+    color: var(--element-green);
 }
 
+a,
+p,
+input,
+button,
 h1,
 h2,
 h3,
@@ -81,6 +89,18 @@ h6 {
     text-align: center;
 }
 
+.text.size-115 {
+    font-size: 1.15rem;
+}
+
+.text.size-125 {
+    font-size: 1.25rem;
+}
+
 .title {
     font-size: 1.75rem;
+}
+
+.bold {
+    font-weight: bold;
 }

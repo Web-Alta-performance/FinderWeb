@@ -70,7 +70,7 @@ const team = [
 ]
 
 const About = () => {
-    return (<div>
+    return (<div style={{ marginInline: 25 }}>
 
         <h2 className='text center title'>Sobre o PetFinder</h2>
         <p className='text center'>
@@ -100,18 +100,15 @@ const About = () => {
         <br />
 
         <h2 className='text center title'>Repositórios do Github</h2>
-        <a className='text center' href="https://github.com/Web-Alta-performance/PetFinder-website" target="#">
+
+        <a className='text center link' href="https://github.com/Web-Alta-performance/PetFinder-website" target="#">
             Repositório deste site ↗
         </a>
-
         <br />
-
         <a className='text center link' href="https://github.com/Web-Alta-performance/PetFinder" target="#">
             Repositório do aplicativo ↗
         </a>
-
         <br />
-
         <a className='text center link' href="https://github.com/Web-Alta-performance/PetFinder-api" target="#">
             Repositório da API ↗
         </a>
