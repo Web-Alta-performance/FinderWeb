@@ -123,6 +123,11 @@ h6 {
     font-size: 1rem;
 }
 
+.input.invalid,
+.input.invalid:focus {
+    border: 2px solid var(--text-warning) !important;
+}
+
 .input:focus {
     outline: none;
     border: 2px solid var(--element-green);
