@@ -4,18 +4,27 @@ a {
 }
 
 .navBar {
-    font-size: 1.25rem;
-    
-    flex: 1;
-    display: flex;
+    align-items: center;
+    background-color: hsl(145, 45%, 50%);
 }
 
 .navBar ul {
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .navBar li {
     list-style: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.navButton {
+    padding-inline: 12;
+    padding-block: 7;
+    border-radius: 20;
+}
+
+.navBar .active {
+    background-color: hsl(145, 45%, 35%);
 }

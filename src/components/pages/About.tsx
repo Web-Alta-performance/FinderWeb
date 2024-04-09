@@ -1,6 +1,6 @@
-import React from "react";
+import '../../css/main.css';
 
-// nome: função
+// nome (matricula) -- função
 const team = [
     {
         name: 'Carlos Alberto Ramalho',
@@ -28,7 +28,7 @@ const team = [
         function: 'Tester',
     },
     {
-        name:'Laryssa Rayanne Souza Martins',
+        name: 'Laryssa Rayanne Souza Martins',
         registration: '01612424',
         function: 'Tester',
     },
@@ -71,43 +71,52 @@ const team = [
 
 const About = () => {
     return (<div>
-            <div style={{flex: 1, display: 'flex', justifyContent: 'center'}}>
-                <h3 style={{textAlign: 'center'}}>Esta página ainda receberá uma estilização em CSS apropriada.</h3>
-            </div>
-            <h2>Sobre o PetFinder</h2>
-            <p>
-                PetFinder é um app que visa facilitar e democratizar
-                a adoção de pets em busca de novos donos.
-            </p>
-            <br/>
-            <h2>Sobre este website</h2>
-            <p>
-                O site é uma representação visual do banco de dados do
-                aplicativo PetFinder. Ele deve lhe proporcionar todas as
-                opções de CRUD para cada documento disponível.
-            </p>
-            <br/>
-            <h2>Equipe</h2>
-            {team.map((member, key) => {
-                return (
-                    <p key={key}>{`${member.name} (${member.registration}) — ${member.function}`}</p>
-                )
-            })}
-            <br/>
-            <h2>Repositório do Github</h2>
-            <a style={{textDecoration: 'underline'}} href="https://github.com/Web-Alta-performance/PetFinder-website" target="#">
-                Repositório deste site ↗
-            </a>
-            <br/><br/>
-            <a style={{textDecoration: 'underline'}} href="https://github.com/Web-Alta-performance/PetFinder" target="#">
-                Repositório do aplicativo ↗
-            </a>
-            <br/><br/>
-            <a style={{textDecoration: 'underline'}} href="https://github.com/Web-Alta-performance/PetFinder-api" target="#">
-                Repositório da API ↗
-            </a>
-            <br/><br/>
-        </div>
+
+        <h2 className='text center title'>Sobre o PetFinder</h2>
+        <p className='text center'>
+            PetFinder é um app que visa facilitar e democratizar
+            a adoção de pets em busca de novos donos.
+        </p>
+
+        <br />
+
+        <h2 className='text center title'>Sobre este website</h2>
+
+        <p className='text center'>
+            O site é uma representação visual do banco de dados do
+            aplicativo PetFinder. Ele deve lhe proporcionar todas as
+            opções de CRUD para cada documento disponível.
+        </p>
+
+        <br />
+
+        <h2 className='text center title'>Equipe</h2>
+        {team.map((member, key) => {
+            return (
+                <p className='text center' key={key}>{`${member.name} (${member.registration}) — ${member.function}`}</p>
+            )
+        })}
+
+        <br />
+
+        <h2 className='text center title'>Repositórios do Github</h2>
+        <a className='text center' href="https://github.com/Web-Alta-performance/PetFinder-website" target="#">
+            Repositório deste site ↗
+        </a>
+
+        <br />
+
+        <a className='text center link' href="https://github.com/Web-Alta-performance/PetFinder" target="#">
+            Repositório do aplicativo ↗
+        </a>
+
+        <br />
+
+        <a className='text center link' href="https://github.com/Web-Alta-performance/PetFinder-api" target="#">
+            Repositório da API ↗
+        </a>
+        <br /><br />
+    </div>
     )
 };
 

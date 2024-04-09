@@ -1,5 +1,3 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import { Routes, Route } from 'react-router-dom';
@@ -10,11 +8,11 @@ import { About } from './components/pages/About';
 function App() {
   return (
     <>
-    <Navbar />
-    <Routes >
-      <Route  path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
+      <Navbar />
+      <Routes >
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
   );
 }
