@@ -15,14 +15,12 @@ const InsertApiURL = ({ setFunc }: insertApiLinkProps) => {
         return await axios.get(`/`, { baseURL })
             .then((response) => {
                 if (response.status === 200) {
-                    console.log(response)
                     setLoading(false);
                     return true
                 }
                 return false
             })
             .catch((error) => {
-                console.error(error)
                 setLoading(false);
                 return false;
             });
