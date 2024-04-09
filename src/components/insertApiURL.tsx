@@ -1,5 +1,4 @@
 import '../css/main.css';
-import styles from '../css/insertApiURL.module.css';
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 
 interface insertApiLinkProps {
@@ -31,12 +30,11 @@ const InsertApiURL = ({ setFunc }: insertApiLinkProps) => {
         if (apiExists && inputRef.current) {
             setFunc(inputRef.current.value);
         }
-        console.log(apiExists)
     }, [apiExists, setFunc])
 
     const apiDoesntExistWarning = !apiExists && emptyInput
         ? <></>
-        : <p className={`text center warning bold size-115 ${styles.warning}`} style={{ margin: 0, }}>
+        : <p className='text center warning bold size-115 error' style={{ margin: 0, }}>
             Link inválido. Verifique se o link está correto e tente novamente.
         </p>
 
@@ -44,8 +42,8 @@ const InsertApiURL = ({ setFunc }: insertApiLinkProps) => {
         <div className='flex center direction-column' style={{ gap: 5 }}>
             <p className='text center bold size-125'>Insira a URL da api:</p>
             {apiDoesntExistWarning}
-            <input className={`flex center ${styles.input}`} style={{ padding: 10, borderRadius: 7, }} ref={inputRef} />
-            <button className={`text center bold size-115 ${styles.button}`} style={{ paddingInline: 20, paddingBlock: 10, borderRadius: 10, marginTop: 10, }} onClick={handleClick}>Confirmar</button>
+            <input className='flex center input' style={{ padding: 10, borderRadius: 7, }} ref={inputRef} />
+            <button className='text center bold size-115 button' style={{ paddingInline: 20, paddingBlock: 10, borderRadius: 10, marginTop: 10, }} onClick={handleClick}>Confirmar</button>
         </div >
     );
 };

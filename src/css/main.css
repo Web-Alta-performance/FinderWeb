@@ -97,10 +97,56 @@ h6 {
     font-size: 1.25rem;
 }
 
+.text.error {
+    color: var(--text-warning)
+}
+
 .title {
     font-size: 1.75rem;
 }
 
 .bold {
     font-weight: bold;
+}
+
+.input {
+    color: var(--text-color);
+    background-color: var(--dark-background);
+    border: none;
+    border: 2px solid transparent;
+    transition: border 100ms;
+
+    font-size: 1rem;
+}
+
+.input:focus {
+    outline: none;
+    border: 2px solid var(--element-green);
+}
+
+
+.button {
+    transform: translateY(2px);
+    background-color: var(--dark-background);
+    border: none;
+    color: var(--text-color);
+
+    box-shadow: 0px 10px 50px -10px transparent;
+    transition: box-shadow 150ms, background-color 150ms, color 150ms, transform 200ms,
+}
+
+.button:hover {
+    background-color: var(--element-green);
+    color: var(--dark-background);
+
+    box-shadow: 0px 5px 50px -10px var(--element-green);
+    transform: translateY(0px);
+    cursor: pointer;
+}
+
+.button:active {
+    --color: hsl(150, 70%, 40%);
+    background-color: var(--color);
+    box-shadow: 0px 10px 50px -10px var(--color);
+    transform: translateY(1px);
 }
