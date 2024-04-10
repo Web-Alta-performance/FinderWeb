@@ -1,3 +1,44 @@
+.button {
+    border: none;
+    color: var(--text-color);
+    position: relative;
+    padding: 0.2em 0.5em;
+    background-color: transparent;
+    transition: color 100ms;
+}
+
 .active {
     color: var(--element-green);
+
+}
+
+.button.active::before {
+    transform: scaleX(100%);
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+
+    margin-inline: 5px;
+
+    border-radius: 40px;
+
+    background-color: var(--element-green);
+
+    transform: scaleX(0%);
+    transition: transform 125ms;
+}
+
+.button:hover::before {
+    transform: scaleX(100%);
+}
+
+.button:active::before {
+    transform: scaleX(92%);
 }

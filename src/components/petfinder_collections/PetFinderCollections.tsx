@@ -13,16 +13,16 @@ const PetFinderCollections = () => {
     return (
         <div className='flex center column'>
             <div className='flex center' style={{ gap: 50 }}>
-                <p className={`${classes} ${(tab === 'users' && style.active)}`}
-                    onClick={() => setTab('users')}
-                    style={{ cursor: 'pointer' }}>
+                <button className={`${style.button} ${classes} ${(tab === 'users' && style.active)}`}
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => setTab('users')}>
                     users
-                </p>
-                <p className={`${classes} ${(tab === 'pets' && style.active)}`}
-                    onClick={() => setTab('pets')}
-                    style={{ cursor: 'pointer' }}>
+                </button>
+                <button className={`${classes} ${style.button} ${(tab === 'pets' && style.active)}`}
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => setTab('pets')}>
                     pets
-                </p>
+                </button>
             </div>
             {tab === 'users' && <UserCollection />}
             {tab === 'pets' && <PetsCollection />}
