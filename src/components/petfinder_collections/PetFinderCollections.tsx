@@ -2,13 +2,8 @@ import '../../css/main.css';
 import style from './petfindercollections.module.css';
 import { useState } from 'react';
 
-const UserCollection = () => {
-    return <p>User collection</p>
-}
-
-const PetsCollection = () => {
-    return <p>Pets collection</p>
-}
+import { UserCollection } from './userCollection';
+import { PetsCollection } from './petsCollection';
 
 const PetFinderCollections = () => {
 
