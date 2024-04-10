@@ -1,6 +1,9 @@
 import '../../css/main.css';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import { InsertApiURL } from '../insertApiURL';
+import { PetFinderCollections } from '../petfinder_collections/PetFinderCollections';
+
+export const ApiURLContext = createContext<string>('');
 
 const Home = () => {
 
@@ -9,7 +12,10 @@ const Home = () => {
     const isApiURLSet = () => !!apiURL
 
     const insertApiPrompt = isApiURLSet()
-        ? <p>Sim: {apiURL}</p>
+        ? <ApiURLContext.Provider value={apiURL}>
+            <PetFinderCollections />
+        </ApiURLContext.Provider>
+
         : <InsertApiURL setFunc={setApiURL} />
 
     return (
