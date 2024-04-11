@@ -25,17 +25,7 @@ h6 {
     color: var(--text-color);
 }
 
-a::selection,
-p::selection,
-br::selection,
-h1::selection,
-h2::selection,
-h3::selection,
-h4::selection,
-h5::selection,
-h6::selection,
-input::selection,
-button::selection {
+*::selection {
     color: var(--dark-background);
     background-color: var(--element-green);
 }
