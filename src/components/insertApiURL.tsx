@@ -48,16 +48,16 @@ const InsertApiURL = ({ setFunc }: insertApiLinkProps) => {
     }, [apiExists, setFunc])
 
     const apiDoesntExistWarning = showWarning
-        ? <p className='text center warning bold size-115 error' style={{ margin: 0, }}>
-            Link inválido. Verifique se o link está correto e tente novamente.
-        </p>
+        ? <p className='text center warning bold size-115 error'>
+            Link inválido.Verifique se o link está correto e tente novamente.
+        </p >
         : <></>
 
     const button = loading
         ? <LoadingIcon />
         : <button
             className='text center bold size-115 button'
-            style={{ paddingInline: 20, paddingBlock: 10, borderRadius: 10, marginTop: 10, }}
+            style={{ margin: 10 }}
             onClick={handleClick}>
             Confirmar
         </button>
@@ -66,7 +66,7 @@ const InsertApiURL = ({ setFunc }: insertApiLinkProps) => {
         <div className='flex center column' style={{ gap: 5 }}>
             <p className='text center bold size-125'>Insira a URL da api:</p>
             {apiDoesntExistWarning}
-            <input className={`flex center input ${showWarning ? 'invalid' : ''}`} placeholder='http://localhost:3000' style={{ padding: 10, borderRadius: 7, }} ref={inputRef} />
+            <input className={`flex center input ${showWarning ? 'invalid' : ''}`} placeholder='http://localhost:3000' style={{ borderRadius: 7, }} ref={inputRef} />
             {button}
         </div >
     );
