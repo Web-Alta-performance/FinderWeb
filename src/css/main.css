@@ -27,6 +27,7 @@ h6 {
 
 a::selection,
 p::selection,
+br::selection,
 h1::selection,
 h2::selection,
 h3::selection,
