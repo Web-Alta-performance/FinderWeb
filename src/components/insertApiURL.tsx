@@ -63,7 +63,7 @@ const InsertApiURL = ({ setFunc }: insertApiLinkProps) => {
         </button>
 
     return (
-        <div className='flex center direction-column' style={{ gap: 5 }}>
+        <div className='flex center column' style={{ gap: 5 }}>
             <p className='text center bold size-125'>Insira a URL da api:</p>
             {apiDoesntExistWarning}
             <input className={`flex center input ${showWarning ? 'invalid' : ''}`} placeholder='http://localhost:3000' style={{ padding: 10, borderRadius: 7, }} ref={inputRef} />
