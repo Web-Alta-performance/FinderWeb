@@ -118,10 +118,7 @@ const About = () => {
         <div className='flex flex1 center' style={{ marginTop: 100, marginBottom: 20 }}>
             <div className='flex column center'>
                 <img alt='amonguinho' src={amonguinho} width={50} />
-                <div className='flex center' style={{ gap: 10 }}>
-                    <p>marci esteve aqui</p>
-                    <img alt="gif" src="https://cdn3.emoji.gg/emojis/9662-catclap.gif" width={20} height={20} />
-                </div>
+                <p>marci esteve aqui</p>
             </div>
         </div>
     </div>
