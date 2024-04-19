@@ -20,18 +20,18 @@ const UserList = ({ users }: { users: User[] }) => {
     }
 
     const columns = (
-        <div className='flex center column gap-15' style={{ marginBlock: 20 }}>
+        <div className='center gap-15 flex' style={{ marginBlock: 20, flexWrap: 'wrap' }}>
             {users.map((user, i) => {
                 const KEY = i + 1;
                 return (
                     <div
                         key={KEY}
-                        className='flex-1 column'
+                        className='flex column'
                         style={{
                             backgroundColor: 'var(--dark-background)',
-                            paddingInline: 14,
+                            paddingInline: 24,
                             paddingBlock: 10,
-                            marginInline: 20,
+                            margin: 20,
                             borderRadius: 15,
                         }}
                     >
